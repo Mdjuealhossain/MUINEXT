@@ -4,13 +4,12 @@ import {
   mainListItems,
   secondaryListItems,
 } from "../TemplateMui/Deshboard/ListItem";
+import { theme } from "../ThemingContainet/createTheme";
 
 const SidNav = () => {
   return (
-    <List component="nav">
+    <List sx={{ boxShadow: theme.shadows[8] }} component="nav">
       {mainListItems}
-      <Divider sx={{ my: 1 }} />
-      {secondaryListItems}
     </List>
   );
 };

@@ -11,12 +11,20 @@ import LayersIcon from "@mui/icons-material/Layers";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import { Box, ButtonBase, Container } from "@mui/material";
 import Image from "next/image";
+import { theme } from "@/app/ThemingContainet/createTheme";
+import { MuiButtonBase, NavTextBox } from "./components/Box";
+import Link from "next/link";
+import { deshdata } from "./components/data";
 
 export const mainListItems = (
   <React.Fragment>
     <Box
       component="div"
-      sx={{ display: "flex", padding: "16px", marginLeft: "12px" }}
+      sx={{
+        display: "flex",
+        padding: "16px",
+        marginLeft: "12px",
+      }}
     >
       <Image
         src="https://uko-react.vercel.app/static/logo/logo.svg"
@@ -28,12 +36,16 @@ export const mainListItems = (
         UKO
       </Box>
     </Box>
-    <Container
+    <Box
+      component="div"
       sx={{
-        height: "auto",
+        paddingLeft: "16px",
+        paddingRight: "16px",
+        height: "100%",
         direction: "inherit",
         position: "relative",
-        display: "block",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <Box
@@ -45,26 +57,22 @@ export const mainListItems = (
           marginLeft: "15px",
           marginBottom: "10px",
           textTransform: "uppercase",
-          color: "rgb(140, 163, 186)",
+          color: theme.palette.text.primary,
         }}
       >
         Dashboard
       </Box>
-      <Box component="div">
-        <ButtonBase>
-          <Box
-            sx={{
-              fontSize: "13px",
-              paddingLeft: "0.8rem",
-              fontWeight: 500,
-              color: "rgb(140, 163, 186)",
-            }}
-          >
-            LMS
-          </Box>
-        </ButtonBase>
-      </Box>
-    </Container>
+      {deshdata.map((data) => {
+        return (
+          <Link href={data.url}>
+            <MuiButtonBase>
+              {data.icon}
+              <NavTextBox>{data.name}</NavTextBox>
+            </MuiButtonBase>
+          </Link>
+        );
+      })}
+    </Box>
   </React.Fragment>
 );
 

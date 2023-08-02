@@ -59,7 +59,7 @@ export const palette = {
             A700: "#616161"
         },
         text: {
-           primary:"rgba(0, 0, 0, 0.87)",
+           primary: "rgb(140, 163, 186)",
            secondary:"rgba(0, 0, 0, 0.6)",
            disabled: "rgba(0, 0, 0, 0.38)"
         },
