@@ -9,39 +9,62 @@ import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import LayersIcon from "@mui/icons-material/Layers";
 import AssignmentIcon from "@mui/icons-material/Assignment";
+import { Box, ButtonBase, Container } from "@mui/material";
+import Image from "next/image";
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItemButton>
+    <Box
+      component="div"
+      sx={{ display: "flex", padding: "16px", marginLeft: "12px" }}
+    >
+      <Image
+        src="https://uko-react.vercel.app/static/logo/logo.svg"
+        alt="Picture of the author"
+        width={18}
+        height={22}
+      />
+      <Box sx={{ paddingLeft: "8px", fontWeight: 700, fontSize: "20px" }}>
+        UKO
+      </Box>
+    </Box>
+    <Container
+      sx={{
+        height: "auto",
+        direction: "inherit",
+        position: "relative",
+        display: "block",
+      }}
+    >
+      <Box
+        component="p"
+        sx={{
+          fontWeight: 700,
+          fontSize: "12px",
+          marginTop: "20px",
+          marginLeft: "15px",
+          marginBottom: "10px",
+          textTransform: "uppercase",
+          color: "rgb(140, 163, 186)",
+        }}
+      >
+        Dashboard
+      </Box>
+      <Box component="div">
+        <ButtonBase>
+          <Box
+            sx={{
+              fontSize: "13px",
+              paddingLeft: "0.8rem",
+              fontWeight: 500,
+              color: "rgb(140, 163, 186)",
+            }}
+          >
+            LMS
+          </Box>
+        </ButtonBase>
+      </Box>
+    </Container>
   </React.Fragment>
 );
 

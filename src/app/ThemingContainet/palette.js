@@ -59,8 +59,11 @@ export const palette = {
             A700: "#616161"
         },
         text: {
-            divider: "rgba(0, 0, 0, 0.12)"
+           primary:"rgba(0, 0, 0, 0.87)",
+           secondary:"rgba(0, 0, 0, 0.6)",
+           disabled: "rgba(0, 0, 0, 0.38)"
         },
+         divider: "rgba(0, 0, 0, 0.12)",
         background: {
             paper:"#fff",
             default:"#fff"
