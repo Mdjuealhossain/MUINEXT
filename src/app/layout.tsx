@@ -33,7 +33,9 @@ export default function RootLayout({
             <Grid lg={2}>
               <SidNav></SidNav>
             </Grid>
-            <Grid lg={10}>{children}</Grid>
+            <Grid lg={1}></Grid>
+            <Grid lg={8}>{children} </Grid>
+            <Grid lg={1}></Grid>
           </Grid>
         </body>
       </ThemeProvider>

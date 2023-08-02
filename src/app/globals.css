@@ -28,8 +28,6 @@ align-items: center;
 padding: 10px;
 } */
 
-
-
 /* card end */
 /* Avarter start */
 /* .MuiAvatar-root{
@@ -70,18 +68,17 @@ border-radius: 10px;
 /* Avarter end */
 
 /* AvatarGroup start */
-.MuiAvatarGroup-root{
+.MuiAvatarGroup-root {
   display: flex;
   flex-direction: row-reverse;
-
 }
-.MuiAvatarGroup-avatar{
-    justify-content: center;
-    align-items: center;
-    background-color: bisque;
-    color: black;
-    border-radius: 0%;
-    border: 2px solid #ff00a9;
+.MuiAvatarGroup-avatar {
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  color: black;
+  border-radius: 0%;
+  border: 2px solid #ff00a9;
 }
 
 /* AvatarGroup end */

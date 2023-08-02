@@ -22,6 +22,7 @@ import SimpoleLineChart from "./ReChart/LineChart/SimpoleLineChart";
 export default function Home() {
   return (
     <Box>
+      <Box sx={{ height: "80px", background: "#000" }}>kgk</Box>
       <SimpoleLineChart></SimpoleLineChart>
     </Box>
   );
