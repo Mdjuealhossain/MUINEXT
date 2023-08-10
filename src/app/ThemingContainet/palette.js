@@ -66,7 +66,7 @@ export const palette = {
          divider: "rgba(0, 0, 0, 0.12)",
         background: {
             paper:"#fff",
-            default:"#fff"
+            default:"rgb(255, 255, 255) "
         }
 
     }

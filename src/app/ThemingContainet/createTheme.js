@@ -1,11 +1,11 @@
 
 // for button start here
-
+"use client"
 import { createTheme } from "@mui/material";
 import { palette } from "./palette"
 import { shadows } from "./boxshadow"
 import { typography } from "./typography"
-import { components } from "../OverRideThemeFoeCard/simpoleCard/ThemeComponent"
+import {components} from "./ThemeComponent"
 
 
 

@@ -92,6 +92,7 @@ export const components = {
                 minWidth: 64,
                 padding: '10px 20px',
                 borderRadius: "5px",
+                
 
             }),
             outlined: ({ theme }) => ({
@@ -254,6 +255,13 @@ export const components = {
             }),
             secondaryAction:({theme})=>({
                 paddingRight: 48
+            })
+        }
+    },
+    MuiToolbar:{
+        styleOverrides:{
+            root:({theme})=>({
+            marginRight:0
             })
         }
     }

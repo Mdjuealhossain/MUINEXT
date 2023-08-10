@@ -1,8 +1,8 @@
 "use client";
-import { Grid, List, ThemeProvider, createTheme } from "@mui/material";
+import { Box, Grid, List, ThemeProvider, createTheme } from "@mui/material";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { theme } from "./ThemingContainet/createTheme";
+
 import SidNav from "./SidNavbar/index";
 import Divider from "@mui/material/Divider";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,6 +12,9 @@ import {
   mainListItems,
   secondaryListItems,
 } from "./TemplateMui/Deshboard/ListItem";
+import HeaderPage from "./TemplateMui/header";
+import { theme } from "./ThemingContainet/createTheme";
+import NavHeader from "./SidNavbar/NavHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,12 +33,18 @@ export default function RootLayout({
       <ThemeProvider theme={theme}>
         <body className={inter.className}>
           <Grid container>
-            <Grid lg={2}>
+            <Grid lg={2.2} sx={{ background: "red" }}>
+              <NavHeader></NavHeader>
               <SidNav></SidNav>
             </Grid>
-            <Grid lg={1}></Grid>
-            <Grid lg={8}>{children} </Grid>
-            <Grid lg={1}></Grid>
+
+            <Grid lg={9.8}>
+              <HeaderPage></HeaderPage>
+              <Box sx={{ background: "blue", paddingRight: 6, paddingLeft: 6 }}>
+                {" "}
+                {children}
+              </Box>
+            </Grid>
           </Grid>
         </body>
       </ThemeProvider>

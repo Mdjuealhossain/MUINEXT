@@ -68,7 +68,7 @@ border-radius: 10px;
 /* Avarter end */
 
 /* AvatarGroup start */
-.MuiAvatarGroup-root {
+/* .MuiAvatarGroup-root {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -78,7 +78,17 @@ border-radius: 10px;
   background-color: bisque;
   color: black;
   border-radius: 0%;
-  border: 2px solid #ff00a9;
-}
+  border: 2px solid #edc945;
+} */
 
 /* AvatarGroup end */
+body {
+  background-color: rgb(243, 244, 249);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav-scr {
+  max-height: calc(100vh - 70px);
+}
