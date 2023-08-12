@@ -5,8 +5,6 @@ export const components = {
     MuiCard: {
         styleOverrides: {
             root: ({ theme, ownerState }) => ({
-                backgroundColor: theme.palette.grey[400],
-                color: theme.palette.common.black,
                 boxShadow: ownerState.variant === "custom" ? theme.shadows[1] : ownerState.variant === "custom2" ? theme.shadows[2] : ownerState.variant === "custom3" ? theme.shadows[3] : theme.shadows[4],
             }
 
@@ -79,7 +77,7 @@ export const components = {
     MuiCardContent: {
         styleOverrides: {
             root: ({ theme }) => ({
-                padding: " 5px 18px 2px 18px",
+          
 
             })
         }
@@ -261,7 +259,8 @@ export const components = {
     MuiToolbar:{
         styleOverrides:{
             root:({theme})=>({
-            marginRight:0
+            marginRight:0,
+            minHeight:0
             })
         }
     }

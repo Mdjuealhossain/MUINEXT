@@ -2,16 +2,25 @@ import React from "react";
 import Image from "next/image";
 import { Box, IconButton } from "@mui/material";
 import KeyboardTabIcon from "@mui/icons-material/KeyboardTab";
+import { theme } from "@/app/ThemingContainet/createTheme";
 
 const NavHeader = () => {
   return (
     <Box
       component="div"
       sx={{
+        padding: "24px 16px 8px 32px",
+        height: "40px",
+        alignItems: "center",
+        justifyContent: "space-between",
         display: "flex",
         position: "fixed",
-        padding: "16px",
-        marginLeft: "12px",
+        background: theme.palette.background.default,
+        border: "none",
+        borderColor: theme.palette.background.default,
+        minHeight: "auto",
+        left: 0,
+        right: 1252,
       }}
     >
       <Box sx={{ display: "flex" }}>

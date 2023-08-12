@@ -20,87 +20,84 @@ import {
   MuiButtonBase,
   NavTextBox,
 } from "../TemplateMui/Deshboard/ListItem/components/Box";
+import NavHeader from "./NavHeader";
+import "./style.css";
 
 const SidNav = () => {
   return (
-    <Box sx={{ overflowX: "hidden", maxHeight: " calc(100vh - 70px)" }}>
+    <div className="sidnav">
+      <Box sx={{}}>
+        {" "}
+        <NavHeader></NavHeader>
+      </Box>
       <AppBar
         sx={{
-          top: 60,
+          display: "flex",
+          flexDirection: "column",
+          position: "fixed",
+          top: 72,
           left: 0,
           right: 1252,
+          paddingLeft: 2,
+          paddingRight: 2,
+          height: "100%",
           width: "auto",
+          overflow: "scroll",
           background: theme.palette.background.default,
+          boxShadow: "none",
         }}
       >
-        <Box>
-          <Box sx={{ maxHeight: "calc(100vh - 70px)" }}>
-            <Box
-              component="div"
-              sx={{
-                paddingLeft: 2,
-                paddingRight: 2,
-                height: "100%",
-                direction: "inherit",
-                position: "relative",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <Box
-                component="p"
-                sx={{
-                  fontWeight: 700,
-                  fontSize: "12px",
-                  marginTop: "20px",
-                  marginLeft: "15px",
-                  marginBottom: "10px",
-                  textTransform: "uppercase",
-                  color: theme.palette.text.primary,
-                }}
-              >
-                Dashboard
-              </Box>
-              {deshdata.map((data: any) => {
-                return (
-                  <Link href={data.url}>
-                    <MuiButtonBase>
-                      {data.icon}
-                      <NavTextBox>{data.name}</NavTextBox>
-                    </MuiButtonBase>
-                  </Link>
-                );
-              })}
-
-              <Box
-                component="p"
-                sx={{
-                  fontWeight: 700,
-                  fontSize: "12px",
-                  marginTop: "20px",
-                  marginLeft: "15px",
-                  marginBottom: "10px",
-                  textTransform: "uppercase",
-                  color: theme.palette.text.primary,
-                }}
-              >
-                MANAGEMENT
-              </Box>
-              {mangmenrdata.map((data: any) => {
-                return (
-                  <Link href={data.url}>
-                    <MuiButtonBase>
-                      {data.icon}
-                      <NavTextBox>{data.name}</NavTextBox>
-                    </MuiButtonBase>
-                  </Link>
-                );
-              })}
-            </Box>
-          </Box>
+        <Box
+          component="p"
+          sx={{
+            fontWeight: 700,
+            fontSize: "12px",
+            marginTop: "20px",
+            marginLeft: "15px",
+            marginBottom: "10px",
+            textTransform: "uppercase",
+            color: theme.palette.text.primary,
+          }}
+        >
+          Dashboard
         </Box>
+        oklgyuijkdtcuyj
+        {deshdata.map((data: any) => {
+          return (
+            <Link href={data.url}>
+              <MuiButtonBase>
+                {data.icon}
+                <NavTextBox>{data.name}</NavTextBox>
+              </MuiButtonBase>
+            </Link>
+          );
+        })}
+        <Box
+          component="p"
+          sx={{
+            fontWeight: 700,
+            fontSize: "12px",
+            marginTop: "20px",
+            marginLeft: "15px",
+            marginBottom: "10px",
+            textTransform: "uppercase",
+            color: theme.palette.text.primary,
+          }}
+        >
+          MANAGEMENT
+        </Box>
+        {mangmenrdata.map((data: any) => {
+          return (
+            <Link href={data.url}>
+              <MuiButtonBase>
+                {data.icon}
+                <NavTextBox>{data.name}</NavTextBox>
+              </MuiButtonBase>
+            </Link>
+          );
+        })}
       </AppBar>
-    </Box>
+    </div>
   );
 };
 

@@ -4,12 +4,24 @@ import "./globals.css";
 import { Box, Button, Container, Grid, Paper, Typography } from "@mui/material";
 import Image from "next/image";
 import { theme } from "./ThemingContainet/createTheme";
+import Bars from "./MuiX-Chart/Bars";
+import BasicBars from "./MuiX-Chart/Bars";
+import BarsDataset from "./MuiX-Chart/BarsDataset";
 // import GridCom from "./MuiStuleComponents/GridCompon";
 
 export default function Home() {
   return (
-    <Box sx={{ display: "flex", flexDirection: "row" }}>
-      <Paper
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+      }}
+    >
+      <BasicBars></BasicBars>
+      <BarsDataset></BarsDataset>
+
+      {/* <Paper
         sx={{
           background: theme.palette.background.default,
           marginRight: 5,
@@ -69,7 +81,7 @@ export default function Home() {
       </Paper>
       <Container sx={{ bgcolor: theme.palette.background.default }}>
         <Typography variant="h1">yasgdhb</Typography>
-      </Container>
+      </Container> */}
     </Box>
   );
 }
