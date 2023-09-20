@@ -33,13 +33,20 @@ export default function RootLayout({
       <ThemeProvider theme={theme}>
         <body className={inter.className}>
           <Grid container>
-            <Grid lg={2.2}>
+            <Grid lg={2.2} xl={2.2} sm={2.2} xs={2.2}>
               <SidNav></SidNav>
             </Grid>
 
-            <Grid lg={9.8}>
+            <Grid lg={9.8} xl={9.8} sm={9.8} xs={9.8}>
               <HeaderPage></HeaderPage>
-              <Box sx={{ paddingRight: 6, paddingLeft: 6, marginTop: 10 }}>
+              <Box
+                sx={{
+                  paddingRight: 6,
+                  paddingLeft: 6,
+                  marginTop: 10,
+                  marginBottom: 10,
+                }}
+              >
                 {children}
               </Box>
             </Grid>

@@ -1,25 +1,43 @@
 "use client";
 import "./globals.css";
 
-import { Box, Button, Container, Grid, Paper, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+  Stack,
+} from "@mui/material";
 import Image from "next/image";
 import { theme } from "./ThemingContainet/createTheme";
 import Bars from "./MuiX-Chart/Bars";
 import BasicBars from "./MuiX-Chart/Bars";
 import BarsDataset from "./MuiX-Chart/BarsDataset";
+import FixedSizeGrid from "./MUI_X/DATA_GRID/Layout/Predefined-dimensions";
+import AutoHeightGrid from "./MUI_X/DATA_GRID/Layout/AutoHight";
 // import GridCom from "./MuiStuleComponents/GridCompon";
 
 export default function Home() {
   return (
-    <Box
+    <Stack
+      spacing={5}
       sx={{
         display: "flex",
         flexDirection: "row",
+        flexWrap: "wrap",
         justifyContent: "space-between",
       }}
     >
       <BasicBars></BasicBars>
-      <BarsDataset></BarsDataset>
+
+      <Box>
+        <BarsDataset></BarsDataset>
+      </Box>
+
+      <FixedSizeGrid></FixedSizeGrid>
+      <AutoHeightGrid></AutoHeightGrid>
 
       {/* <Paper
         sx={{
@@ -82,6 +100,6 @@ export default function Home() {
       <Container sx={{ bgcolor: theme.palette.background.default }}>
         <Typography variant="h1">yasgdhb</Typography>
       </Container> */}
-    </Box>
+    </Stack>
   );
 }

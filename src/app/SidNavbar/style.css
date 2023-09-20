@@ -1,12 +1,15 @@
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 8px;
+}
+::-webkit-scrollbar:hover {
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: "rgb(255, 255, 255) ";
+  background-color: rgb(255, 255, 255);
 }
 
 /* Handle */
@@ -16,5 +19,5 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
+  background: rgb(194, 194, 194);
 }

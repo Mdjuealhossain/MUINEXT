@@ -10,7 +10,7 @@ const chartSetting = {
       label: "rainfall (mm)",
     },
   ],
-  width: 600,
+  width: 650,
   height: 300,
   sx: {
     [`.${axisClasses.left} .${axisClasses.label}`]: {
@@ -108,8 +108,13 @@ const dataset = [
 export default function BarsDataset() {
   return (
     <Card>
-      <CardHeader></CardHeader>
-      <CardContent>
+      <CardHeader
+        title="Rainfall in the world"
+        subheader="August 15, 2023"
+      ></CardHeader>
+      <CardContent
+        sx={{ paddingTop: 0, marginTop: 0, paddingBottom: 0, marginBottom: 0 }}
+      >
         <BarChart
           dataset={dataset}
           xAxis={[{ scaleType: "band", dataKey: "month" }]}
